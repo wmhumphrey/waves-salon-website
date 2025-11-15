@@ -40,7 +40,7 @@
         <div class="container footer-inner">
             <div>
                 <h4>Waves Salon</h4>
-                <p>965 Ritchie Hwy<br>Arnold, MD 21012</p>
+                <p>123 Temp st<br>Your father's butt</p>
             </div>
             <div>
                 <h4>Contact</h4>
@@ -54,7 +54,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> Waves Salon. All rights reserved.</p>
+            <p style="font-size: 0.8rem; opacity: 0.7;">
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </p>
+            <p>&copy; <span id="year">{{ year }}</span> Waves Salon. All rights reserved.</p>
         </div>
     </footer>
 

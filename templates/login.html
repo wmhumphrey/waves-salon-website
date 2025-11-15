@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Login | Waves Salon{% endblock %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container" style="max-width: 480px; margin: 0 auto;">
+        <h1>Private Preview</h1>
+        <p>This site is currently in a private preview mode.</p>
+
+        <form method="post" class="contact-form" style="margin-top: 1rem;">
+            <label for="password">Enter access password</label>
+            <input type="password" id="password" name="password" required>
+
+            {% if error %}
+            <p style="color: #b91c1c; margin-top: 0.5rem;">{{ error }}</p>
+            {% endif %}
+
+            <button type="submit" class="btn primary" style="margin-top: 1rem;">Enter</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
