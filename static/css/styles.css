@@ -1,0 +1,425 @@
+/* ================================
+   Waves Salon - Boho Coastal Theme
+   ================================ */
+
+/* Color system */
+:root {
+    --color-bg: #f5efe6;
+    /* soft sand */
+    --color-bg-light: #fdfaf6;
+    /* light shell */
+    --color-text: #1f2933;
+    /* deep ink */
+    --color-muted: #6b7280;
+    /* soft grey */
+    --color-accent: #88c0b8;
+    /* seafoam */
+    --color-accent-2: #d08c60;
+    /* terracotta/clay */
+    --color-hero-from: #f5efe6;
+    /* warm sand */
+    --color-hero-to: #e0f2f1;
+    /* pale aqua */
+    --color-footer-bg: #243b53;
+    /* soft navy */
+    --color-border-subtle: #e5e7eb;
+}
+
+/* Global reset & base
+   -------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 0.5rem;
+}
+
+a {
+    color: inherit;
+}
+
+/* Layout helpers
+   -------------------------- */
+
+.container {
+    width: min(1100px, 100% - 2rem);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 3rem 0;
+    background-color: transparent;
+}
+
+.section.light {
+    background-color: var(--color-bg-light);
+}
+
+.section.accent {
+    background: linear-gradient(135deg, #e0f2f1, #f5efe6);
+    color: var(--color-text);
+}
+
+.center {
+    text-align: center;
+}
+
+/* Typography
+   -------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    letter-spacing: 0.04em;
+    color: var(--color-text);
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+p {
+    font-size: 0.98rem;
+    color: var(--color-muted);
+}
+
+/* Header & Navigation
+   -------------------------- */
+
+.site-header {
+    background-color: #ffffffdd;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+}
+
+.logo a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.main-nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.3rem;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent-2), var(--color-accent));
+    border-radius: 999px;
+    transition: width 0.18s ease-out;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.main-nav a.active {
+    color: var(--color-accent-2);
+}
+
+/* Hero section
+   -------------------------- */
+
+.hero {
+    padding: 3.5rem 0 3rem;
+    background: radial-gradient(circle at top left, #fdfaf6 0, var(--color-hero-from) 40%, var(--color-hero-to) 100%);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.75rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.1rem, 3vw + 1rem, 2.9rem);
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.02rem;
+    color: var(--color-muted);
+    margin-bottom: 1.7rem;
+    max-width: 32rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+}
+
+.hero-image img {
+    border-radius: 1.75rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.25);
+    object-fit: cover;
+}
+
+/* Buttons
+   -------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+    color: white;
+    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+}
+
+.btn.secondary {
+    background-color: #ffffff;
+    color: var(--color-text);
+    border-color: rgba(208, 140, 96, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(15, 23, 42, 0.25);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(15, 23, 42, 0.18);
+}
+
+/* Cards & Services
+   -------------------------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.6rem;
+    margin-top: 1.7rem;
+}
+
+.card {
+    background-color: var(--color-bg-light);
+    border-radius: 1.25rem;
+    padding: 1.5rem 1.6rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.card p {
+    font-size: 0.96rem;
+}
+
+.card .price {
+    margin-top: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent-2);
+}
+
+/* Section CTAs */
+
+.section-cta {
+    margin-top: 2.2rem;
+    text-align: center;
+}
+
+/* Two-column (about section / split layouts)
+   -------------------------- */
+
+.two-column {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 2.2rem;
+    align-items: center;
+}
+
+.two-column p {
+    margin-bottom: 0.6rem;
+}
+
+.about-photo img {
+    border-radius: 1.7rem;
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.25);
+}
+
+/* Accent CTA section
+   -------------------------- */
+
+.section.accent .btn.primary {
+    background: linear-gradient(135deg, var(--color-accent-2), var(--color-accent));
+}
+
+/* Footer
+   -------------------------- */
+
+.site-footer {
+    background-color: var(--color-footer-bg);
+    color: #e5e7eb;
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.site-footer h4 {
+    margin-bottom: 0.5rem;
+    color: #f9fafb;
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0.8rem 0;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+/* Utility: page titles on inner pages
+   -------------------------- */
+
+.page-header {
+    padding: 2.5rem 0 1rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.page-header p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive tweaks
+   -------------------------- */
+
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    .main-nav a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .hero-inner,
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 2.6rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-text p {
+        max-width: none;
+    }
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    margin-top: 10px;
+}

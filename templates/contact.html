@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Waves Salon{% endblock %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container two-column">
+
+        <div>
+            <h1>Contact Us</h1>
+            <p>Have questions or want to book an appointment? Reach out below.</p>
+
+            <ul>
+                <li><strong>Email:</strong> waves.salon@example.com</li>
+                <li><strong>Phone:</strong> (555) 555-5555</li>
+                <li><strong>Location:</strong> Annapolis, Maryland</li>
+            </ul>
+
+            <p>Booking online? Our full booking system will be added soon.</p>
+        </div>
+
+        <div>
+            <form class="contact-form">
+                <label>Name</label>
+                <input type="text" placeholder="Your name">
+
+                <label>Email</label>
+                <input type="email" placeholder="Your email">
+
+                <label>Message</label>
+                <textarea rows="5" placeholder="How can we help?"></textarea>
+
+                <button class="btn primary">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

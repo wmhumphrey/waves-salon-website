@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Waves Salon | Hair Salon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Nunito:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <!-- Swap this text with an image later if you have a logo -->
+                <a href="index.html">Waves Salon</a>
+            </div>
+            <nav class="main-nav">
+                <a href="{{ url_for('home') }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a>
+                <a href="{{ url_for('services') }}" class="{% if active_page == 'services' %}active{% endif %}">Services</a>
+                <a href="{{ url_for('gallery') }}" class="{% if active_page == 'gallery' %}active{% endif %}">Gallery</a>
+                <a href="{{ url_for('about') }}" class="{% if active_page == 'about' %}active{% endif %}">About</a>
+                <a href="{{ url_for('contact') }}" class="{% if active_page == 'contact' %}active{% endif %}">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <h4>Waves Salon</h4>
+                <p>965 Ritchie Hwy<br>Arnold, MD 21012</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Phone: (XXX) XXX-XXXX<br>
+                    Email: info@wavessalon.org</p>
+            </div>
+            <div>
+                <h4>Hours</h4>
+                <p>Tues-Fri 10:00am - 6:00pm <br>Sun 11:00am - 4:00 pm <br>Closed Sat & Mon</p>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Waves Salon. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

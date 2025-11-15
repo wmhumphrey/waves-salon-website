@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Gallery | Waves Salon{% endblock %}
+
+{% block content %}
+
+<section class="section">
+    <div class="container">
+        <h1>Style Gallery</h1>
+        <p>A look at our recent transformations and client styles.</p>
+
+        <div class="gallery-grid">
+
+            <img src="{{ url_for('static', filename='img/kara_headshot_temp.jpg') }}" alt="Gallery Image">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Gallery Image">
+
+            <!-- Add your real salon photos here -->
+            <!-- Example placeholders:
+            <img src="{{ url_for('static', filename='img/style1.jpg') }}" alt="Balayage">
+            <img src="{{ url_for('static', filename='img/style2.jpg') }}" alt="Highlights">
+            <img src="{{ url_for('static', filename='img/style3.jpg') }}" alt="Cut & Style">
+            -->
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

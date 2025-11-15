@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Waves Salon{% endblock %}
+
+{% block content %}
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>About Waves Salon</h1>
+                <p>A cozy, modern coastal salon with a boho, laid-back feel — focused on healthy hair, soft texture, and
+                    styles that feel like you.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container two-column">
+                <div>
+                    <h2>Meet Your Stylist</h2>
+                    <p>
+                        This is where you’ll write a short bio about your mom.
+                        Mention how many years she’s been behind the chair, the types of hair she loves working with,
+                        and any specialties she offers — color, balayage, cutting, curls, blonding, etc.
+                    </p>
+                    <p>
+                        You can also talk about her approach: maybe she loves thorough consultations, low-maintenance
+                        color,
+                        or teaching clients how to style their hair at home. Keep it warm, friendly, and personal.
+                    </p>
+                    <p>
+                        Add anything that makes Waves Salon feel local and welcoming — such as being a small,
+                        independently owned salon
+                        that values connection and comfort.
+                    </p>
+                </div>
+                <div class="about-photo">
+                    <img src="{{ url_for('static', filename='img/kara_headshot_temp.jpg') }}" alt="Stylist at Waves Salon">
+                </div>
+            </div>
+        </section>
+
+        <section class="section light">
+            <div class="container">
+                <h2>What to Expect at Your Visit</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Relaxed, Boho-Coastal Atmosphere</h3>
+                        <p>Soft colors, natural textures, and a calm, welcoming space to unwind while you get your hair
+                            done.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Thorough Consultation</h3>
+                        <p>Time to talk through your hair goals, lifestyle, and maintenance level so your style fits
+                            your real life.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Education & Styling Tips</h3>
+                        <p>Simple styling tips and product recommendations so you can recreate your look at home.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section accent">
+            <div class="container center">
+                <h2>Ready for a Fresh Look?</h2>
+                <p>Whether you want a subtle refresh or a big change, Waves Salon is here to help you feel like your
+                    best self.</p>
+                <a href="#" class="btn primary">Book an Appointment</a>
+                <!-- Replace # with booking link later -->
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Waves Salon{% endblock %}
+
+{% block content %}
+
+<!-- Hero section -->
+<section class="hero">
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <h1>Effortless, Beautiful Hair at Waves Salon</h1>
+            <p>Personalized cuts, color, and styling in a relaxed, welcoming space.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('services') }}" class="btn primary">View Services</a>
+                <a href="#" class="btn secondary">Book an Appointment</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Client getting hair styled at Waves Salon">
+        </div>
+    </div>
+</section>
+
+<!-- Highlight services -->
+<section class="section light" id="featured-services">
+    <div class="container">
+        <h2>Popular Services</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Balayage</h3>
+                <p>Dimensional color, balayage, and highlights to brighten your look.</p>
+                <p class="price">From $215+</p>
+            </article>
+            <article class="card">
+                <h3>Full Highlight</h3>
+                <p>.</p>
+                <p class="price">From $200+</p>
+            </article>
+            <article class="card">
+                <h3>Partial Highlight</h3>
+                <p>Updos and styling for weddings, formals, and special events.</p>
+                <p class="price">From $145+</p>
+            </article>
+        </div>
+        <div class="section-cta">
+            <a href="{{ url_for('services') }}" class="btn primary">See Full Service Menu</a>
+        </div>
+    </div>
+</section>
+
+<!-- About preview -->
+<section class="section">
+    <div class="container two-column">
+        <div>
+            <h2>Meet Your Stylist</h2>
+            <p>Kara Konski is a tenured stylist with over 7 years of experince. With the ability to connect with her
+                clients and
+                deliver them the best customer service, she is a pillar in the local community. Specializing in lived in
+                color, she has the
+                ability to make you more beautiful than you ever dreamed.
+            </p>
+            <p>Escape the noise and come the coast at Waves Salon!</p>
+            <a href="{{ url_for('about') }}" class="btn secondary">Learn More</a>
+        </div>
+        <div class="about-photo">
+            <img src="{{ url_for('static', filename='img/kara_headshot_temp.jpg') }}" alt="Stylist at Waves Salon">
+        </div>
+    </div>
+</section>
+
+<!-- Call to action -->
+<section class="section accent">
+    <div class="container center">
+        <h2>Ready for Your Next Hair Appointment?</h2>
+        <p>Click below to book your visit at Waves Salon.</p>
+        <a href="#" class="btn primary">Book Now</a>
+    </div>
+</section>
+
+{% endblock %}
